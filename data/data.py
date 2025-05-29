@@ -12,6 +12,10 @@ RESPONSE_BODY_CREATE_USER_WITHOUT_FIELDS = {
     "success": False,
     "message": "Email, password and name are required fields"
 }
+RESPONSE_BODY_AUTH_USER_WITH_INVALID_CREDS = {
+    "success": False,
+    "message": "email or password are incorrect"
+}
 DATA_TEST_REG_WITHOUT_FIELDS = [
         {"email": "email", "password": "", "name": ""},
         {"email": "", "password": "", "name": "name"},

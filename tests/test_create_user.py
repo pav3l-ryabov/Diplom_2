@@ -31,7 +31,7 @@ class TestCreateUser:
 
     @allure.title('Тест создания юзера c пустыми полями')
     @allure.description('Тест создает юзера с пустыми полями, параметризация используется для того, чтобы покрыть проверками'
-                        'все случаи, проверки оптимизированы с помощью техники попарного тестирования')
+                        'все случаи. Проверки оптимизированы с помощью техники попарного тестирования')
     @pytest.mark.parametrize("payload", DATA_TEST_REG_WITHOUT_FIELDS)
     def test_create_new_user_without_required_field(self, payload):
         body_payload = payload
