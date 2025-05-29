@@ -4,7 +4,7 @@ from data.data import RESPONSE_BODY_AUTH_USER_WITH_INVALID_CREDS
 from methods.user_methods import UserMethods
 
 
-class TestCreateUser:
+class TestLoginUser:
 
     @allure.title('Тест авторизации юзера')
     @allure.description('Тест создает юзера с валидными рандомными кредами, затем авторизует его и проверяет, что тело'

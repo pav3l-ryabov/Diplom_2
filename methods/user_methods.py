@@ -20,3 +20,14 @@ class UserMethods:
     def delete_user(self, access_token):
         response = requests.delete(f'{BASE_URL}{DELETE_USER_URL}', headers={'Authorization': f'Bearer {access_token}'})
         return response, response.status_code
+
+    @allure.step('Изменение данных пользователя')
+    def patch_user(self, payload, access_token):
+        response = requests.patch(f'{BASE_URL}{DELETE_USER_URL}', json = payload,
+                                  headers={'Authorization': f'Bearer {access_token}'})
+        return response, response.status_code
+
+    @allure.step('Получение данных пользователя')
+    def get_info_user(self, access_token):
+        response = requests.get(f'{BASE_URL}{DELETE_USER_URL}', headers={'Authorization': f'Bearer {access_token}'})
+        return response, response.status_code
