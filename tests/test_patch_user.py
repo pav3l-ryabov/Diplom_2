@@ -1,6 +1,5 @@
 import allure
 
-from data.data import RESPONSE_BODY_AUTH_USER_WITH_INVALID_CREDS
 from methods.user_methods import UserMethods
 
 

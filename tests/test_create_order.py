@@ -1,10 +1,7 @@
 import allure
-import pytest
 
-from data.data import RESPONSE_BODY_EXIST_USER, RESPONSE_BODY_CREATE_USER_WITHOUT_FIELDS, DATA_TEST_REG_WITHOUT_FIELDS, \
-    VALID_ORDER, INVALID_ORDER, EMPTY_ORDER
+from data.data import VALID_ORDER, INVALID_ORDER, EMPTY_ORDER
 from methods.order_methods import OrderMethods
-from methods.user_methods import UserMethods
 
 
 class TestCreateOrder:
@@ -27,7 +24,7 @@ class TestCreateOrder:
         payload = VALID_ORDER
         response, status = OrderMethods.create_order(self, payload, access_token= 'invalid_token')
         assert status == 403, f'Ожидали 403, а получили {status}'
-        assert response.json().get("success") is False, f'Ожидали success: true, получили {response}'
+        assert response.json().get("success") is False, f'Ожидали success: false, получили {response}'
 
     @allure.title('Тест создания заказа без ингредиентов с авторизацией')
     @allure.description('Тест создает юзера с валидными рандомными кредами, затем создает заказ без ингредиентов'

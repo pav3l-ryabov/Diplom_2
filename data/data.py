@@ -26,4 +26,4 @@ DATA_TEST_REG_WITHOUT_FIELDS = [
 
 VALID_ORDER = {"ingredients": ["61c0c5a71d1f82001bdaaa73"]}
 EMPTY_ORDER = {"ingredients": []}
-INVALID_ORDER = {"ingredients": ["invalid_hash"]}
+INVALID_ORDER = {"ingredients": ["invalid_hash142142"]}
